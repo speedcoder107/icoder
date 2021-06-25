@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .carousel.carousel-fade .carousel-item {
+            display: block;
+            opacity: 0;
+            transition: opacity ease-out .7s;
+        }
+
+        .carousel.carousel-fade .carousel-item.active {
+            opacity: 1 !important;
+        }
+
+        .blog-footer {
+            padding: 2.5rem 0;
+            color: #727272;
+            text-align: center;
+            background-color: #f9f9f9;
+            border-top: .05rem solid #e5e5e5;
+        }
+    </style>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>i-coder Heaven for programers</title>
+</head>
+
+<body>
+    <nav class="container-fluid navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="home.html">i-coder</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Topics
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="technology.html">Technology</a></li>
+                            <li><a class="dropdown-item" href="web development.html">Web development</a></li>
+                            <li><a class="dropdown-item" href="tech-fun.html">Tech-fun</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="support.html">Support</a></li>
+                            <li><a class="dropdown-item" href="write for us.html">Write for us</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+                <div class="mx-2">
+                    <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+                    <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#signupModal">Signup</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login at i-coder</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3 row">
+                        <label for="inputPassword" class="col-sm-2 col-form-label">E-mail</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputemail">
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" id="inputPassword">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Signup Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signupModalLabel">Signup at i-coder</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3 row">
+                        <label for="inputPassword" class="col-sm-2 col-form-label">Name</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputemail">
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="inputPassword" class="col-sm-2 col-form-label">E-mail</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputemail">
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" id="inputPassword">
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="inputPassword" class="col-sm-2 col-form-label">Confirm Password</label>
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" id="inputPassword">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Signup</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="carouselExampleDark" class="carousel carousel-dark slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner carousel-fade">
+            <div class="carousel-item active" data-bs-interval="10000">
+                <img src="https://source.unsplash.com/1390x500/?apple,laptop" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>Welcome to i-coder</h2>
+                    <p>technology, news, development and trend</p>
+                    <a href="web development.html"><button class="btn btn-outline-dark">web development</button></a>
+                    <a href="Technology.html"><button class="btn btn-outline-dark margin">Technology</button></a>
+                    <a href="tech-fun.html"><button class="btn btn-outline-dark">tech-fun</button></a>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="https://source.unsplash.com/1390x500/?technology" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>Welcome to i-coder</h2>
+                    <p>technology, news, development and trend </p>
+                    <a href="web development.html"><button class="btn btn-outline-dark">web development</button></a>
+                    <a href="Technology.html"><button class="btn btn-outline-dark margin">Technology</button></a>
+                    <a href="tech-fun.html"><button class="btn btn-outline-dark">tech-fun</button></a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://source.unsplash.com/1390x500/?coding" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>Welcome to i-coder</h2>
+                    <p>technology, news, development and trend</p>
+                    <a href="web development.html"><button class="btn btn-outline-dark">web development</button></a>
+                    <a href="Technology.html"><button class="btn btn-outline-dark margin">Technology</button></a>
+                    <a href="tech-fun.html"><button class="btn btn-outline-dark">tech-fun</button></a>
+                </div>
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <div id="main" class="container clearfix my-5">
+
+        <div id="container">
+
+
+            <div id="primary">
+                <div id="content">
+                    <section id="post-1305" class="post-1305 page type-page status-publish hentry">
+                        <article>
+
+
+                            <header class="entry-header">
+                                <h1 class="entry-title">
+                                    Support Us </h1><!-- .entry-title -->
+                            </header>
+
+
+
+                            <div class="entry-content clearfix">
+                                <p>You are the reason we produce the Web Professional Minute. You are what we write
+                                    about. You are what inspires us to keep delivering this podcast. We are all
+                                    responsible for our long term success.</p>
+                                <p>Without you, we don’t exist. If you would like to support our efforts, here’s some
+                                    specific ways to help.</p>
+                                <ul>
+                                    <li><strong>Become a sponsor</strong>. Although we don’t edit our posts to fit
+                                        corporate messages, we do offer ad rotations on the homepage as well as audio
+                                        trailers at the end of each podcast. <a title="Become a sponsor."
+                                            href="http://webprominute.org/?page_id=8">View Advertising and sponsorship
+                                            opportunities</a>.</li>
+                                </ul>
+                                <ul>
+                                    <li><strong>Become a subscriber</strong>. It’s free and easy.<br>
+                                        <a title="Subscribe via email."
+                                            href="http://www.feedburner.com/fb/a/emailverifySubmit?feedId=2830979&amp;loc=en_US">Subscribe
+                                            via email</a>. You’ll receive an email each time a new podcast is
+                                        available.<br>
+                                        <a title="Subscribe to RSS feed."
+                                            href="http://feeds.feedburner.com/WebProfessionalMinute">Subscribe to our
+                                            RSS feed</a>. Use the latest browsers (IE and FireFox) or one of these “top
+                                        ten <a title="Top ten Windows feed readers."
+                                            href="http://email.about.com/cs/rssfeedreaders/tp/top_rss_windows.htm">Windows</a>
+                                        and <a title="Top ten Mac feed readers."
+                                            href="http://email.about.com/cs/rssfeedreaders/tp/top_rss_mac.htm">Mac</a>
+                                        feed readers” to automatically receive updates as new podcasts are available.
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li><strong>Become a content contributor </strong>(<a title="Contact us"
+                                            href="http://webprominute.org/?page_id=3">simple registration</a>).Also you
+                                        can contribute in several ways, including;Comment on posts that interest you. We
+                                        enjoy your comments and love building relationships with community. We learn
+                                        from your comments new ways to improve the service. By commenting, you help us
+                                        close the feedback loop. <a title="Send us some feedback."
+                                            href="http://webprominute.org/?page_id=3">Send us some feedback</a>.</li>
+                                </ul>
+                                <ul>
+                                    <li><strong>Become an editor </strong>(<a title="Simple"
+                                            href="http://webprominute.org/?page_id=3">Contact Us</a>). Take your shot at
+                                        writing 150 words of wisdom, news or editorial. We’ll convert it to a podcast
+                                        and publish your finest works. You’ll get a valuable link to your own page on
+                                        our site. You’ll also get a link to your website and your name will be displayed
+                                        prominently in each post your write. When you <a
+                                            title="Register to become an editor."
+                                            href="http://webprominute.org/?page_id=3">Contact Web Pro Minute </a>, we’ll
+                                        ask if you want to become an editor.</li>
+                                </ul>
+                                <ul>
+                                    <li><strong>Link to us from your site</strong>. Adding a text link to our site from
+                                        your site is a vote of confidence. It’s also a great way to share our resources
+                                        with your visitors.<br>
+                                        <em>Here’s some cut and paste linking information for your page:</em><br>
+                                        <a title="http://www.webprominute.org" href="http://www.webprominute.org/">Web
+                                            Pro Minute</a><br>
+                                        Web Pro News, Interviews, Reports, Web Professional Profiles
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li><strong>Visit our feed distributors</strong>. We’re syndicated on other websites
+                                        that have unique, complimentary and helpful services for our content. By
+                                        supporting these sites and communities, you’re supporting our greater goals of
+                                        sharing the aloha.<br>
+                                        <em>Here’s a few places to check out:<br>
+                                        </em><a title="Melodeo and MobileCast" href="http://www.melodeo.com/">Melodeo
+                                            and Mobilecast</a> have merged. Check us out on your phone (if it doesn’t
+                                        already work seamlessly).<br>
+                                        <a title="Join our MyBlogLog community."
+                                            href="http://www.mybloglog.com/buzz/community/2006102016043625">Our
+                                            MyBlogLog Community</a> – Join our community and see what others are writing
+                                        about.<br>
+                                        <a title="Add us to your NetVibes homepage."
+                                            href="http://www.netvibes.com/subscribe.php?url=http://feeds.feedburner.com/wowtechminute">Add
+                                            us to your NetVibes homepage</a>. Get organized 2.0!<br>
+                                        <a title="Subscribe to our podcast at Odeo"
+                                            href="http://odeo.com/channel/132976/view">Subscribe to our Podcast on
+                                            Odeo</a>.
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li><strong>Send a link to a friend</strong>. Share the aloha with one of your
+                                        friends, students or teachers.</li>
+                                </ul>
+                                <ul>
+                                    <li><strong>Bookmark our site</strong>. Add out link to your favorite social
+                                        bookmarking site. Links are provided at the bottom of every post.</li>
+                                </ul>
+                            </div>
+                        </article>
+                    </section>
+                </div><!-- #content -->
+            </div><!-- #primary -->
+
+
+            <div id="secondary">
+
+
+
+            </div><!-- #secondary -->
+        </div><!-- #container -->
+
+
+    </div>
+    <footer class="blog-footer">
+        <p>Blog template built for <a href="blog coder website using bootstrap.html">i-coder</a></p>
+        <p>
+            <a href="#">Back to top</a>
+        </p>
+    </footer>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
